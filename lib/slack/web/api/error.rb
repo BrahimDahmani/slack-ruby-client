@@ -1,7 +1,7 @@
 module Slack
   module Web
     module Api
-      class Error < ::Faraday::ClientError
+      class Error < ::Faraday::Error::ClientError
         attr_reader :response
 
         def initialize(message, response = nil)
